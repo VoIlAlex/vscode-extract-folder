@@ -2,7 +2,7 @@
 
 ## Features
 
-- Extract the content of a file to the parent of the folder.
+- Extract the content of a folder to the parent folder.
 
 ![Extract Here](data/extract_here_demo.gif)
 
