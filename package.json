@@ -1,7 +1,7 @@
 {
 	"name": "extract-folder",
 	"displayName": "Extract Folder",
-	"description": "Utility to delete folders without deleting the contant of the folders",
+	"description": "Utility to delete folders without deleting the content of the folders",
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.42.0"
