@@ -1,6 +1,4 @@
 .vscode/
 .idea/
-.pytest_cache/
-__pycache__/
 bin/
 node_modules/
