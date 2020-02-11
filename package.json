@@ -6,6 +6,11 @@
 	"engines": {
 		"vscode": "^1.42.0"
 	},
+	"author": {
+		"name": "Ilya Vouk",
+		"email": "ilya.vouk@gmail.com"
+	},
+	"publisher": "voilalex",
 	"categories": [
 		"Other"
 	],
@@ -13,7 +18,7 @@
 		"onCommand:extension.extractFolderHere"
 	],
 	"main": "./extension.js",
-	"icon": "./data/icon.png",
+	"icon": "data/icon.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/VoIlAlex/vscode-extract-folder"
