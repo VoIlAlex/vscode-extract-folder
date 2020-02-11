@@ -2,7 +2,7 @@
 	"name": "extract-folder",
 	"displayName": "Extract Folder",
 	"description": "Utility to delete folders without deleting the content of the folders",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.42.0"
 	},
@@ -10,7 +10,7 @@
 		"name": "Ilya Vouk",
 		"email": "ilya.vouk@gmail.com"
 	},
-	"publisher": "voilalex",
+	"publisher": "VoIlAlex",
 	"categories": [
 		"Other"
 	],
@@ -23,6 +23,7 @@
 		"type": "git",
 		"url": "https://github.com/VoIlAlex/vscode-extract-folder"
 	},
+	"readme": "./README.md",
 	"contributes": {
 		"commands": [{
 			"command": "extension.extractFolderHere",
