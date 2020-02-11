@@ -27,6 +27,16 @@
 					"group": "7_modification"
 				}
 			]
+		},
+		"configuration": {
+			"title": "Extract Folder",
+			"properties": {
+				"extractFolder.deleteFolderAfterExtraction": {
+					"type": "boolean",
+					"default": true,
+					"description": "Weather to delete the extracted folder or keep it."
+				}
+			}
 		}
 	},
 	"scripts": {

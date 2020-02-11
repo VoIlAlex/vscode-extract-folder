@@ -17,9 +17,12 @@ function activate(context) {
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with  registerCommand
   // The commandId parameter must match the command field in package.json
+
+  let config = vscode.workspace.getConfiguration("extractFolder");
+
   let disposable = vscode.commands.registerCommand(
     "extension.extractFolderHere",
-    async function (folderURI) {
+    async function(folderURI) {
       // The code you place here will be executed every time your command is executed
 
       let pathToFolder = null;
@@ -37,30 +40,34 @@ function activate(context) {
 
       if (!fs.lstatSync(pathToFolder).isDirectory()) {
         vscode.window.showErrorMessage(
-          "Only folders could be extracted.\"" +
-          pathToFolder +
-          "\" is not a folder."
+          'Only folders could be extracted."' +
+            pathToFolder +
+            '" is not a folder.'
         );
         return;
       }
 
-
       let filesInFolder = fs.readdirSync(pathToFolder);
       filesInFolder.forEach(fileName => {
         let filePath = pathToFolder + "/" + fileName;
-        let newFileFolder = pathToFolder.substring(0, pathToFolder.lastIndexOf("\\") + 1);
+        let newFileFolder = pathToFolder.substring(
+          0,
+          pathToFolder.lastIndexOf("\\") + 1
+        );
         // in case of linux path
         if (newFileFolder === "") {
-          newFileFolder = pathToFolder.substring(0, pathToFolder.lastIndexOf("/") + 1);
+          newFileFolder = pathToFolder.substring(
+            0,
+            pathToFolder.lastIndexOf("/") + 1
+          );
         }
         let newFilePath = newFileFolder + "/" + fileName;
         fs.renameSync(filePath, newFilePath);
       });
 
-      fs.rmdirSync(pathToFolder);
-
-
-      //TODO: extract folder specified by `pathToFolder`
+      if (config.get("deleteFolderAfterExtraction") === true) {
+        fs.rmdirSync(pathToFolder);
+      }
     }
 
     /*
@@ -79,7 +86,6 @@ function activate(context) {
 
   context.subscriptions.push(disposable);
 }
-
 
 exports.activate = activate;
 
