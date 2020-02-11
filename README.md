@@ -2,7 +2,9 @@
 
 ## Features
 
-- Extract the content of a file to the parent of the folder
+- Extract the content of a file to the parent of the folder.
+
+![Extract Here](data/extract_here_demo.gif)
 
 ## Requirements
 
@@ -20,6 +22,8 @@ Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of **Extract Folder**
+Initial release of **Extract Folder**:
+
+- **Extract Here** command.
 
 ---
