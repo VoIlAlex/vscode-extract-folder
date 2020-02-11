@@ -13,20 +13,20 @@
 		"onCommand:extension.extractFolderHere"
 	],
 	"main": "./extension.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/VoIlAlex/vscode-extract-folder"
+	},
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.extractFolderHere",
-				"title": "Extract Folder Here"
-			}
-		],
+		"commands": [{
+			"command": "extension.extractFolderHere",
+			"title": "Extract Folder Here"
+		}],
 		"menus": {
-			"explorer/context": [
-				{
-					"command": "extension.extractFolderHere",
-					"group": "7_modification"
-				}
-			]
+			"explorer/context": [{
+				"command": "extension.extractFolderHere",
+				"group": "7_modification"
+			}]
 		},
 		"configuration": {
 			"title": "Extract Folder",
