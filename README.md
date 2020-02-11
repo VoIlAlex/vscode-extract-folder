@@ -1,4 +1,4 @@
-# extract-folder README
+# Extract Folder | Visual Studio Code
 
 ## Features
 
